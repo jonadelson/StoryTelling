@@ -1,0 +1,41 @@
+<div class="start"></div>
+<script src="d3.min.js" charset="utf-8"></script>
+<script>
+        var ws = new WebSocket("ws://localhost:8080/");
+
+        ws.onmessage = function(e)
+        {
+  			var data = JSON.parse(e.data)
+  			d3.select('.start').select('.canvas').remove();
+
+            var svg = d3.select('.start')
+              .append('svg')
+              .attr('width', 1000)
+              .attr('height', 1000)
+              .attr('class', 'canvas');
+
+            var divs = d3.select('.canvas')
+            			 .selectAll('.canvas')
+            			 .data(data)
+            			 .enter();
+
+            divs.append('svg:image')
+            	.attr('x', 20)
+                .attr('y', function(d,i) { return i*200 })
+                .attr('width', 200)
+                .attr('height', 200)
+                .attr('xlink:href', function(d) { return d.url; });
+            			 
+            divs.append('text')
+                .attr('x', 230)
+                .attr('y', function(d,i) { return i*200 + 100;})
+                .text(function(d) { return d.text.substring(0,70); }); 
+
+            divs.append('text')
+                .attr('x', 230)
+                .attr('y', function(d,i) { return i*200 + 120;})
+                .text(function(d) { return d.text.substring(70); }); 
+           
+                          
+        }
+</script>
