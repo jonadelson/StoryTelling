@@ -32,19 +32,24 @@ class StdOutListener(StreamListener):
         """
         decoded = json.loads(data)
         json_object = {} # object that will hold tweet info
-        # Check if there is a media field
-        if 'media' in decoded['entities']:
-            self.count += 1
-            # Collect the image url and the tweet text and add to the list
-            json_object['url'] = decoded['entities']['media'][0]['media_url_https']
-            json_object['text'] = decoded['text']
-            self.out.append(json_object)
-            # If there are 10 tweets, print them 
-            if self.count == 10:
-                print json.dumps(self.out[:3])
-                sys.stdout.flush()
-                self.out = []
-                self.count = 0
+        # Do a try clause because sometimes there is no entities field and 
+        # we do not want this to crash our program
+        try:
+            # Check if there is a media field in entities
+            if 'media' in decoded['entities']:
+                self.count += 1
+                # Collect the image url and the tweet text and add to the list
+                json_object['url'] = decoded['entities']['media'][0]['media_url_https']
+                json_object['text'] = decoded['text']
+                self.out.append(json_object)
+                # If there are 10 tweets, print them 
+                if self.count == 10:
+                    print json.dumps(self.out[:3])
+                    sys.stdout.flush()
+                    self.out = []
+                    self.count = 0
+        except:
+            pass
         return True
 
     def on_error(self, status):
