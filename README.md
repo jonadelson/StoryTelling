@@ -7,8 +7,11 @@ Required library: tweepy
 Note: Use port=8080 for websocketd because that is what index.html looks for
 
 Usage:
+
 websocketd --port=8080 python TwitterStreamer.py
+
 python -m SimpleHTTPServer 8000
+
 localhost:8000
 
 Wait a few seconds and the images and tweets should start to appear
