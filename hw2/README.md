@@ -36,4 +36,5 @@ Zuckerberg, who is siding with Apple, and Bill Gates, who appears to have mixed 
 issue. 
 
 Privacy from the government has been a major issue on people's minds in recent history, especially
-since June of 2013 when Edward Snowden released information about spying activities by the NSA.  
+since June of 2013 when Edward Snowden released information about spying activities by the NSA, and 
+this particular case has definitely brought these issues back into the public eye.  
