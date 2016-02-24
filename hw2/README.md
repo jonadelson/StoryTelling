@@ -17,6 +17,13 @@ because my Reddit password is basically the one I use for everything important (
 The updated program that does not write to Reddit instead just writes the Tweet also to the command
 line. 
 
+Here is a link to the Reddit thread I created: 
+
+https://www.reddit.com/r/test/comments/47d8ao/apple_iphone_fbi_case/
+
+For some reason, I can only currently see the comments when I am signed in to Reddit so I have
+also included a screenshot of what the thread looks like. 
+
 ------------------------------------------------------------------------------------------------
 
 The following is a summary of Apple's battle with the FBI over accessing data from the 
