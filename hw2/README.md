@@ -1,3 +1,18 @@
+Program Usage:
+
+> redis-server
+
+> python TwitterStreamer.py | python diff.py | python insert.py
+
+This will print the stream rate to stdout. The program I had originally was writing "interesting"
+tweets as comments to a reddit thread, but I commented out that ability in the latest program
+because my Reddit password is basically the one I use for everything important (I know, bad idea). 
+
+The updated program that does not write to Reddit instead just writes the Tweet also to the command
+line. 
+
+------------------------------------------------------------------------------------------------
+
 The following is a summary of Apple's battle with the FBI over accessing data from the 
 iPhone belonging to one of the San Bernardino shooters. I will summarize the summary that 
 can be found at the following website:
