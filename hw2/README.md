@@ -5,7 +5,9 @@ Program Usage:
 > python TwitterStreamer.py | python diff.py | python insert.py
 
 Dependencies:
+
 praw (Python wrapper for Reddit API)
+
 tweepy (Python wrapper for Twitter API)
 
 This will print the stream rate to stdout. The program I had originally was writing "interesting"
