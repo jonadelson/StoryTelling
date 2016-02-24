@@ -2,7 +2,7 @@ Program Usage:
 
 > redis-server
 
-> python TwitterStreamer.py | python diff.py | python insert.py
+> python TwitterStreamer.py | python diff.py | python calculate.py
 
 Dependencies:
 
