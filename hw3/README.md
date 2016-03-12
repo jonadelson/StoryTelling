@@ -12,4 +12,4 @@ localhost:5000/ will return the probabilities associated with a hashtag about Is
 
 localhost:5000/entropy will return the entropy of the distribution
 
-localhost:5000/probability?hashtag=<hashtag> will return the probability associated with that particular hashtag
+localhost:5000/probability?hashtag='<hashtag>' will return the probability associated with that particular hashtag
